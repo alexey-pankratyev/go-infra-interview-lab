@@ -1,0 +1,20 @@
+name: go-github-onboarding
+version: 1
+role: onboarding helper for Go interview study repository writes
+triggers:
+  - save study materials to GitHub
+  - sync progress to GitHub
+  - repository defaults missing
+inputs:
+  required:
+    - repository_full_name
+    - branch
+  optional:
+    - root_path
+outputs:
+  - verified_repository_defaults
+  - compact_memory_update
+constraints:
+  - ask only for missing values
+  - verify repository access before writes
+  - resume the original user request after onboarding
