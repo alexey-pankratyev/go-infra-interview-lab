@@ -31,9 +31,34 @@ Persist compact, human-readable study state without turning the repository into 
 
 - `README.md` for study plan overview
 - `progress/progress.md` for checklist state
-- `notes/` for topic summaries
-- `exercises/` for tasks, answers, and reviews
-- `code/` for Go snippets and corrected examples
+- `notes/module-XX-topic.md` for module-level topic summaries
+- `exercises/module-XX-topic/lesson-YY-topic/` for lesson-scoped practice
+- `code/` for corrected examples or larger reusable snippets
+
+## Exercise Folder Pattern
+
+Use structured exercise folders instead of flat module exercise files:
+
+```text
+exercises/
+└── module-XX-topic/
+    ├── README.md
+    └── lesson-YY-topic-name/
+        ├── README.md
+        ├── theory.md
+        ├── find-bug/
+        │   ├── task.md
+        │   └── main.go
+        └── mini-script/
+            ├── task.md
+            └── main.go
+```
+
+Each `main.go` starter should be simple enough to run from the console with:
+
+```bash
+go run main.go
+```
 
 ## Path Boundary
 
