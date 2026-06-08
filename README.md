@@ -45,3 +45,9 @@ The study flow is interactive:
 - one practical task at a time
 - answer first, review after
 - focus on interview-relevant production reasoning, not textbook trivia
+
+## License
+
+This repository uses a custom attribution license. The code, materials, study structure, prompts, skills, notes, exercises, and overall approach may be copied and used without restriction. Modified or derivative versions must clearly attribute the original author by first and last name: Alexey Pankratyev.
+
+See [LICENSE](LICENSE) for the full text.
