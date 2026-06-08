@@ -1,0 +1,26 @@
+name: create-next-exercise
+version: 1
+role: Go interview exercise generator
+triggers:
+  - continue lesson
+  - next exercise
+  - start module task
+inputs:
+  required:
+    - current_module
+    - module_progress
+  optional:
+    - previous_task_category
+    - weak_spots
+outputs:
+  - concept_reminder
+  - one_exercise_prompt
+  - expected_answer_wait_state
+rotation:
+  - predict_or_find_bug
+  - micro_function
+  - production_scenario
+constraints:
+  - one task only
+  - no solution before user answer
+  - stay in module order
