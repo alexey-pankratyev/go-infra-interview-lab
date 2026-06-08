@@ -54,5 +54,3 @@ Starting category: find the bug / predict the output.
 ## Notes
 
 Use this file as the high-level checkpoint log, not as a full transcript.
-
-Saved materials should remain in English. Chat with the user may be in Russian, but repository content should be written in English.
