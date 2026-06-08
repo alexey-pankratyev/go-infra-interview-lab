@@ -41,17 +41,17 @@ Use structured exercise folders instead of flat module exercise files:
 
 ```text
 exercises/
-└── module-XX-topic/
-    ├── README.md
-    └── lesson-YY-topic-name/
-        ├── README.md
-        ├── theory.md
-        ├── find-bug/
-        │   ├── task.md
-        │   └── main.go
-        └── mini-script/
-            ├── task.md
-            └── main.go
+`-- module-XX-topic/
+    |-- README.md
+    `-- lesson-YY-topic-name/
+        |-- README.md
+        |-- theory.md
+        |-- find-bug/
+        |   |-- task.md
+        |   `-- main.go
+        `-- mini-script/
+            |-- task.md
+            `-- main.go
 ```
 
 Each `main.go` starter should be simple enough to run from the console with:
