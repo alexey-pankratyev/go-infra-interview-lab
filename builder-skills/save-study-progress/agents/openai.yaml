@@ -1,0 +1,23 @@
+name: save-study-progress
+version: 1
+role: durable study state writer
+triggers:
+  - save current progress
+  - sync lesson notes
+  - export reviewed exercise
+inputs:
+  required:
+    - repository_defaults
+    - current_module
+    - material_to_save
+outputs:
+  - updated_progress_files
+  - github_commit_confirmation
+write_policy:
+  prefer_update_existing: true
+  avoid_transcripts: true
+  preserve_user_edits: true
+checks:
+  - read target file before update
+  - validate paths are repository-relative
+  - report write failures honestly
