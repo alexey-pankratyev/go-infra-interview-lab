@@ -2,9 +2,10 @@
 
 ## Current status
 
-- Current module: not started
-- Current lesson: not started
-- Last updated: initial setup
+- Current module: 1. Quick Go fundamentals refresh
+- Current lesson: Lesson 1 - pointers, receivers, and mutation semantics
+- Status: ready to start
+- Last updated: 2026-06-08
 
 ## Module checklist
 
@@ -15,6 +16,22 @@
 - [ ] 5. Systems programming and networking
 - [ ] 6. Testing, race detection, benchmarking, and profiling
 - [ ] 7. Final interview drill
+
+## Module 1 plan
+
+Module 1 is a short fundamentals refresh. It should stay practical and avoid beginner-level drills.
+
+Focus lessons:
+
+- Lesson 1: pointers, receiver choice, and mutation semantics
+- Lesson 2: interfaces, nil behavior, and error handling
+- Lesson 3: defer, cleanup, panic/recover boundaries, and package design
+
+## Next exercise
+
+Use `exercises/module-01-fundamentals.md`.
+
+Starting category: find the bug / predict the output.
 
 ## Focus areas
 
@@ -37,3 +54,5 @@
 ## Notes
 
 Use this file as the high-level checkpoint log, not as a full transcript.
+
+Saved materials should remain in English. Chat with the user may be in Russian, but repository content should be written in English.
