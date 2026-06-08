@@ -13,25 +13,49 @@ Use `notes/` for concise topic summaries and interview cheat sheets.
 
 Suggested files:
 
-- `notes/go-fundamentals.md`
-- `notes/slices-maps.md`
-- `notes/memory-gc.md`
-- `notes/concurrency-runtime.md`
-- `notes/networking-systems.md`
-- `notes/testing-profiling.md`
+- `notes/module-01-go-fundamentals.md`
+- `notes/module-02-slices-maps.md`
+- `notes/module-03-memory-gc.md`
+- `notes/module-04-concurrency-runtime.md`
+- `notes/module-05-networking-systems.md`
+- `notes/module-06-testing-profiling.md`
 
 ## Exercises
 
-Use `exercises/` for prompts, user answers, reviews, and corrected examples.
+Use `exercises/` for lesson-scoped practice.
 
-Suggested naming:
+Preferred structure:
 
-- `exercises/module-01-fundamentals.md`
-- `exercises/module-02-slices-maps.md`
+```text
+exercises/
+└── module-XX-topic/
+    ├── README.md
+    └── lesson-YY-topic-name/
+        ├── README.md
+        ├── theory.md
+        ├── find-bug/
+        │   ├── task.md
+        │   └── main.go
+        └── mini-script/
+            ├── task.md
+            └── main.go
+```
+
+Each lesson folder should contain:
+
+- `theory.md` for the short practical foundation
+- `find-bug/` for predict-output or bug-hunting practice
+- `mini-script/` for a small runnable implementation task
+
+Go starter files should be runnable from their directory with:
+
+```bash
+go run main.go
+```
 
 ## Code
 
-Use `code/` for draft snippets and corrected Go examples.
+Use `code/` only for corrected examples, larger snippets, or reusable drafts that no longer belong to a single exercise folder.
 
 Suggested naming:
 
@@ -40,6 +64,7 @@ Suggested naming:
 
 ## Save Rules
 
-- Update existing module files when material belongs to the same module.
-- Add a new file only when it improves navigation.
+- Update existing module and lesson files when material belongs to the same module.
+- Add a new lesson folder when a new topic starts.
 - Keep saved answers concise unless the exact wording is useful for review.
+- Do not keep duplicate flat exercise files when the material has moved into a lesson folder.
