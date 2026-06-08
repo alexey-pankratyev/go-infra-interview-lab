@@ -2,27 +2,71 @@
 
 ## Core Model
 
-Go passes arguments by value. That means every function call receives a copy of each argument.
+Go passes arguments by value. Every function call receives a copy of each argument.
 
-For plain values, the copy is independent:
+For plain values, the function receives an independent local copy:
 
 ```go
-func set(n int) {
-    n = 10
+package main
+
+import "fmt"
+
+func setRetries(retries int) {
+    retries = 10
+}
+
+func main() {
+    retries := 3
+
+    setRetries(retries)
+
+    fmt.Println(retries) // 3
 }
 ```
 
-The caller's integer is unchanged.
+`setRetries(retries)` copies the value `3` into the function parameter `retries`. Inside the function, `retries = 10` changes only that local copy. The caller's variable is still `3`.
 
-For pointers, the pointer value is copied, but both pointer values still point to the same object:
+Mental model:
+
+```text
+main has:        retries = 3
+function gets:   retries = copy of 3
+function sets:   local retries = 10
+main still has:  retries = 3
+```
+
+For pointers, the pointer value is still copied, but the copied pointer points to the same object as the original pointer:
 
 ```go
-func set(p *int) {
-    *p = 10
+package main
+
+import "fmt"
+
+func setRetries(retries *int) {
+    *retries = 10
+}
+
+func main() {
+    retries := 3
+
+    setRetries(&retries)
+
+    fmt.Println(retries) // 10
 }
 ```
 
-The caller's integer is changed through the shared pointed-to object.
+`setRetries(&retries)` copies the address of `retries`. Inside the function, `*retries = 10` follows that copied address and mutates the caller's original variable.
+
+Mental model:
+
+```text
+main has:          retries = 3
+function gets:     copy of address pointing to retries
+function writes:   value at that address = 10
+main now has:      retries = 10
+```
+
+The key distinction: assigning to a value parameter changes the local copy; dereferencing a pointer parameter can change the caller's object.
 
 ## Receiver Choice
 
