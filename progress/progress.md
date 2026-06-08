@@ -29,9 +29,15 @@ Focus lessons:
 
 ## Next exercise
 
-Use `exercises/module-01-fundamentals.md`.
+Use `exercises/module-01-fundamentals/lesson-01-pointers-receivers-mutation/find-bug/task.md`.
 
 Starting category: find the bug / predict the output.
+
+## Practice Files
+
+- Theory: `exercises/module-01-fundamentals/lesson-01-pointers-receivers-mutation/theory.md`
+- Find the bug: `exercises/module-01-fundamentals/lesson-01-pointers-receivers-mutation/find-bug/main.go`
+- Mini-script: `exercises/module-01-fundamentals/lesson-01-pointers-receivers-mutation/mini-script/main.go`
 
 ## Focus areas
 
