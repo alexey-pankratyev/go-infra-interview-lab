@@ -1,0 +1,24 @@
+name: sync-module-state
+version: 1
+role: compact Go study state synchronizer
+triggers:
+  - module completed
+  - exercise reviewed
+  - save progress
+  - resume study flow
+inputs:
+  required:
+    - current_state
+    - state_delta
+outputs:
+  - updated_progress_state
+  - updated_memory_defaults_when_needed
+state_policy:
+  compact: true
+  user_visible_progress: markdown
+  machine_readable_defaults: yaml
+constraints:
+  - no full transcripts
+  - no secrets
+  - preserve module order
+  - read before write
