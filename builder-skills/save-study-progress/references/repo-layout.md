@@ -28,17 +28,17 @@ Preferred structure:
 
 ```text
 exercises/
-└── module-XX-topic/
-    ├── README.md
-    └── lesson-YY-topic-name/
-        ├── README.md
-        ├── theory.md
-        ├── find-bug/
-        │   ├── task.md
-        │   └── main.go
-        └── mini-script/
-            ├── task.md
-            └── main.go
+`-- module-XX-topic/
+    |-- README.md
+    `-- lesson-YY-topic-name/
+        |-- README.md
+        |-- theory.md
+        |-- find-bug/
+        |   |-- task.md
+        |   `-- main.go
+        `-- mini-script/
+            |-- task.md
+            `-- main.go
 ```
 
 Each lesson folder should contain:
