@@ -1,0 +1,26 @@
+contract: go-repo-onboarding
+version: 1
+required_defaults:
+  repository_full_name:
+    description: Repository in owner/name form.
+    example: alexey-pankratyev/go-infra-interview-lab
+  branch:
+    description: Branch used for saved study materials.
+    default: main
+optional_defaults:
+  root_path:
+    description: Repository-relative path for study files.
+    default: .
+validation:
+  - repository exists and is accessible
+  - branch exists or user explicitly asks to create it
+  - root_path does not escape repository root
+memory_policy:
+  store:
+    - repository_full_name
+    - branch
+    - root_path
+  do_not_store:
+    - full chat transcripts
+    - private access tokens
+    - long-form answers or reviews
